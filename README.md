@@ -17,11 +17,11 @@ The aim of this project is to restore some of the game's debug functionality. Mo
 - **Intro & Legal Disclaimers Skip** - They're automatically going to get skipped, at some point I might make it configurable but if you're modding the game you're likely already tired of them.
 
 ### Installation
- - Download the latest release and extract it in your game folder
+ - Download the latest release and extract it to your game folder
  - Get the x86 version of [ThirteenAG's Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) and extract it to your game folder as well (or you can alternatively use a DLL injector of your choice)
 
 ## Credits
 
 - Help: [ermaccer](https://github.com/ermaccer), [jas0n098](https://github.com/jas0n098)
 - Silent: [ModUtils](https://github.com/CookiePLMonster/ModUtils)
-- TsudaKageyu [MinHook](https://github.com/TsudaKageyu/minhook)
+- TsudaKageyu: [MinHook](https://github.com/TsudaKageyu/minhook)
