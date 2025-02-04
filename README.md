@@ -16,6 +16,10 @@ The aim of this project is to restore some of the game's debug functionality. Mo
 - **Slew** - Unfortunately slew is super outdated and the default bindings are horrible, however if you play with a controller they're updated here to be modern (RT/LT to go up/down and LB/RB have been swapped around to make sense. I've also restored the mouse and keyboard controls for slew which the game disables on boot normally.
 - **Intro & Legal Disclaimers Skip** - They're automatically going to get skipped, at some point I might make it configurable but if you're modding the game you're likely already tired of them.
 
+### Installation
+ - Download the latest release and extract it in your game folder
+ - Get the x86 version of [ThirteenAG's Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) and extract it to your game folder as well (or you can alternatively use a DLL injector of your choice)
+
 ## Credits
 
 - Help: [ermaccer](https://github.com/ermaccer), [jas0n098](https://github.com/jas0n098)
