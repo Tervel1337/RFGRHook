@@ -9,6 +9,8 @@ using namespace Console;
 void* Vehicles::SpawnedPointer;
 bool Vehicles::IsSpawning;
 bool* Vehicles::VehicleWarp = (bool*)(Addr(0x0376F033));
+int Vehicles::SpawnFAddr = (int)(Addr(0x00B48570));
+int Vehicles::PointerJAddr = (int)(Addr(0x00B4868D));
 
 int __declspec(naked) Vehicles::Spawn(SpawnParams* Params) {
 	__asm {
@@ -20,7 +22,7 @@ int __declspec(naked) Vehicles::Spawn(SpawnParams* Params) {
 		mov eax, Params
 		push eax
 
-		mov edx, 0x00B48570
+		mov edx, SpawnFAddr
 		call edx
 
 		mov esp, ebp

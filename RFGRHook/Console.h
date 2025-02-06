@@ -17,6 +17,6 @@ namespace Console {
 	void CommandAdd(Command* Command, const char* CommandName, const char* HelpInfo, int Type, void* Addr);
 	void CommandInsert(Dict* Entry);
 	char GetArg(unsigned int Type, int Optional);
-	void CreateCommand(const char* Name, const char* Description, int Type, uintptr_t Addr);
+	void CreateCommand(const char* Name, const char* Description, int Type, uintptr_t Addr, bool ASLR = true);
 	void SetupCommands();
 }

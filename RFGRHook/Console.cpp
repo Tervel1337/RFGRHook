@@ -22,13 +22,13 @@ char Console::GetArg(unsigned int Type, int Optional) {
 	return ((char(__cdecl*)(unsigned int, int))Addr(0x005AF3F0))(Type, Optional);
 }
 
-void Console::CreateCommand(const char* Name, const char* Description, int Type, uintptr_t CallAddr) {
+void Console::CreateCommand(const char* Name, const char* Description, int Type, uintptr_t CallAddr, bool ASLR) {
 	Command* Cmd = new Command;
 	Dict* CmdDict = new Dict;
 	CmdDict->Prev = 0;
 	CmdDict->Def = Cmd;
 	CmdDict->Word = Name;
-	CommandAdd(Cmd, Name, Description, Type, Addr(CallAddr));
+	CommandAdd(Cmd, Name, Description, Type, ASLR ? Addr(CallAddr) : (void*)CallAddr);
 	CommandInsert(CmdDict);
 }
 
@@ -318,5 +318,5 @@ void Console::SetupCommands() {
 	CreateCommand("xray_humans", "Description for xray_humans", 3, 0x006EE7B0);
 	CreateCommand("zone_max_wind_speed", "Description for zone_max_wind_speed", 2, 0x00BEC540);
 	CreateCommand("zone_min_wind_speed", "Description for zone_min_wind_speed", 2, 0x00BEC490);
-	CreateCommand("drop_car", "Usage: drop_car name", 2, (uintptr_t)Vehicles::Spawner);
+	CreateCommand("drop_car", "Usage: drop_car name", 2, (uintptr_t)Vehicles::Spawner, false);
 }

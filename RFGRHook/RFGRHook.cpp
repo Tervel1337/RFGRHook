@@ -98,10 +98,10 @@ void __declspec(naked) RFGRHook::StoreVehPointer() {
 		cmp cl, 0
 		jz Original
 		mov SpawnedPointer, eax
-		jmp Continue
+		jmp PointerJAddr
 
 		Original :
-		jmp Continue
+		jmp PointerJAddr
 	}
 }
 
